@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'war'
+
+ext {
+    springVersion = "4.2.5.RELEASE"
+    jackson2Version = "2.3.2"
+}
+
+jar {
+    baseName = 'to'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile("org.springframework:spring-webmvc:$springVersion")
+    compile ("com.fasterxml.jackson.core:jackson-core:$jackson2Version")
+    compile ("com.fasterxml.jackson.core:jackson-databind:$jackson2Version")
+    testCompile("junit:junit")
+}
+
