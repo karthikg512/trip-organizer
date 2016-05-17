@@ -11,7 +11,9 @@ apply plugin: 'war'
 
 ext {
     springVersion = "4.2.5.RELEASE"
-    jackson2Version = "2.3.2"
+    jackson2Version = "2.7.4"
+    hibernateVersion = "5.1.0.Final"
+    mySqlConnectorVersion = "5.1.37"
 }
 
 jar {
@@ -27,9 +29,12 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 dependencies {
-    compile("org.springframework:spring-webmvc:$springVersion")
+    compile ("org.springframework:spring-webmvc:$springVersion")
     compile ("com.fasterxml.jackson.core:jackson-core:$jackson2Version")
     compile ("com.fasterxml.jackson.core:jackson-databind:$jackson2Version")
+    compile ("org.hibernate:hibernate-core:$hibernateVersion")
+    compile ("org.hibernate:hibernate-entitymanager:$hibernateVersion")
+    compile ("mysql:mysql-connector-java:$mySqlConnectorVersion")
     testCompile("junit:junit")
 }
 
