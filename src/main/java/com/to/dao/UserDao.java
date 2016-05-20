@@ -29,4 +29,12 @@ public class UserDao implements IUserDao {
         return (User) criteria.uniqueResult();
 	}
 
+	@Override
+	public User find(String emailId) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Criteria criteria = session.createCriteria(User.class);
+        criteria.add(Restrictions.eq("emailId",emailId));
+        return (User) criteria.uniqueResult();
+	}
+
 }

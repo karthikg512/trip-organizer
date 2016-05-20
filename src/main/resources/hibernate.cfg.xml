@@ -11,6 +11,7 @@
 		<property name="show_sql">true</property>
 
 		<mapping class="com.to.entities.User"></mapping>
+		<mapping class="com.to.entities.Trip"></mapping>
 
 	</session-factory>
 </hibernate-configuration>
