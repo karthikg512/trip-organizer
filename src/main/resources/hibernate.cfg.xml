@@ -12,6 +12,7 @@
 
 		<mapping class="com.to.entities.User"></mapping>
 		<mapping class="com.to.entities.Trip"></mapping>
+		<mapping class="com.to.entities.Team"></mapping>
 
 	</session-factory>
 </hibernate-configuration>
