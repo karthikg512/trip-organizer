@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.to.dao.ITripDao;
 import com.to.entities.Trip;
+import com.to.entities.TripDetails;
 
 @RestController
 public class TripController {
@@ -25,6 +26,11 @@ public class TripController {
 	@RequestMapping(value="/trip/{id}", method=RequestMethod.GET)
     public Trip getTrip(@PathVariable Long id) {
         return trip.find(id);
+    }
+	
+	@RequestMapping(value="/trip/details/{id}", method=RequestMethod.GET)
+    public TripDetails getTripDetails(@PathVariable Long id) {
+        return trip.getDetails(id);
     }
 
 }

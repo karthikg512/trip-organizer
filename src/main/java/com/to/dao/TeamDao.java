@@ -25,6 +25,7 @@ public class TeamDao implements ITeamDao {
 		session.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Trip> find(Long userId) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -41,7 +42,6 @@ public class TeamDao implements ITeamDao {
         	listOfTrips.add((Trip) tripCriteria.uniqueResult());
         }
         
-        System.out.println("list " + listOfTrips);
         return listOfTrips;
 	}
 

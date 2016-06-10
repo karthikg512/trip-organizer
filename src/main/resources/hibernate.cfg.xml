@@ -13,6 +13,11 @@
 		<mapping class="com.to.entities.User"></mapping>
 		<mapping class="com.to.entities.Trip"></mapping>
 		<mapping class="com.to.entities.Team"></mapping>
-
+		<mapping class="com.to.entities.AccommodationDetails"></mapping>
+		<mapping class="com.to.entities.Activities"></mapping>
+		<mapping class="com.to.entities.ArrFlightDetails"></mapping>
+		<mapping class="com.to.entities.CarRentalDetails"></mapping>
+		<mapping class="com.to.entities.DeptFlightDetails"></mapping>
+		
 	</session-factory>
 </hibernate-configuration>
