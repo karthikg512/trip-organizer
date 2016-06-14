@@ -10,6 +10,7 @@ public class TripDetails {
 	private DeptFlightDetails deptFlightDetails;
 	private ArrFlightDetails arrFlightDetails;
 	private AccommodationDetails accommDetails;
+	private Trip trip;
 
 	public List<User> getUsers() {
 		return users;
@@ -58,12 +59,20 @@ public class TripDetails {
 	public void setAccommDetails(AccommodationDetails accommDetails) {
 		this.accommDetails = accommDetails;
 	}
+	
+	public Trip getTrip() {
+		return trip;
+	}
+
+	public void setTrip(Trip trip) {
+		this.trip = trip;
+	}
 
 	@Override
 	public String toString() {
 		return "TripDetails [users=" + users + ", carRental=" + carRental + ", activities=" + activities
 				+ ", deptFlightDetails=" + deptFlightDetails + ", arrFlightDetails=" + arrFlightDetails
-				+ ", accommDetails=" + accommDetails + "]";
+				+ ", accommDetails=" + accommDetails + ", trip=" + trip + "]";
 	}
 
 }
