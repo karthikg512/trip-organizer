@@ -63,6 +63,10 @@ public class TripDao implements ITripDao {
 //		users.add(Restrictions.eq("tripId",id));
 //		td.setUsers((List<Team>) users.list());
 		
+		Criteria criteria = session.createCriteria(Trip.class);
+        criteria.add(Restrictions.eq("id",id));
+        td.setTrip((Trip) criteria.uniqueResult());
+		
 		return td;
 	}
 
